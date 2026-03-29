@@ -1,0 +1,64 @@
+---
+const services = [
+  {
+    title: "インフラ設計・構築",
+    description: "AWS / Google Cloud を活用したクラウドインフラの設計・構築。チームの状況に合わせて、一緒に考えながら進めます。",
+    icon: "&#9729;",
+  },
+  {
+    title: "IaC / Terraform",
+    description: "Terraformによるインフラのコード化。「まずは既存環境をコード化するところから」も対応します。",
+    icon: "&#9881;",
+  },
+  {
+    title: "CI/CD パイプライン",
+    description: "GitHub Actionsを中心としたCI/CDの設計・構築。チームに合ったワークフローを一緒に作ります。",
+    icon: "&#9654;",
+  },
+  {
+    title: "コンテナ / Docker",
+    description: "Dockerを使ったアプリケーションのコンテナ化。開発環境の統一から本番運用まで、段階的に進めます。",
+    icon: "&#9964;",
+  },
+  {
+    title: "SRE / 監視設計",
+    description: "SLI/SLOの設計、監視・アラートの構築。「何を監視すればいいかわからない」状態から整理します。",
+    icon: "&#9888;",
+  },
+  {
+    title: "技術コンサルティング",
+    description: "技術選定・アーキテクチャレビュー・チーム体制の相談など。気軽に壁打ちできる相手として使ってください。",
+    icon: "&#128172;",
+  },
+];
+
+const techStack = ["AWS", "Google Cloud", "Docker", "Terraform", "GitHub Actions", "Vercel"];
+---
+
+<section id="services" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Services</h2>
+    <p class="text-text-muted text-center mb-16">一緒にできること</p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {services.map((service) => (
+        <div class="p-6 rounded-xl bg-bg-card border border-border hover:border-primary/50 transition-colors">
+          <div class="text-3xl mb-4" set:html={service.icon} />
+          <h3 class="text-lg font-semibold mb-2">{service.title}</h3>
+          <p class="text-text-muted text-sm leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center">
+      <p class="text-text-muted text-sm mb-4">Tech Stack</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {techStack.map((tech) => (
+          <span class="px-4 py-2 text-sm rounded-full bg-bg-card border border-border text-text-muted">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+const useCases = [
+  {
+    title: "「インフラ、誰も触れない」を解消したい",
+    description: "AWSやGoogle Cloudの構成レビュー、Terraformによるコード化、ドキュメント整備まで。属人化したインフラを、チームで扱える状態にします。",
+  },
+  {
+    title: "CI/CDを整えて、リリースを安全にしたい",
+    description: "GitHub Actionsでのパイプライン構築、QA環境の整備、デプロイフローの自動化。「手動デプロイが怖い」状態を改善します。",
+  },
+  {
+    title: "AWSのコストが高い、見直したい",
+    description: "Fargate Spot化、開発環境の自動停止、SavingsPlans最適化など。実績として年間30%のコスト削減を達成しています。",
+  },
+  {
+    title: "監視・アラートを整理したい",
+    description: "Datadog等を使った監視設計、SLI/SLOの整理、アラートノイズの削減。「何を見ればいいかわからない」状態から整理します。",
+  },
+];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Use Cases</h2>
+    <p class="text-text-muted text-center mb-16">こんな課題、ありませんか？</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {useCases.map((uc) => (
+        <div class="p-6 rounded-xl bg-bg-card border border-border">
+          <h3 class="font-semibold mb-3">{uc.title}</h3>
+          <p class="text-text-muted text-sm leading-relaxed">{uc.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

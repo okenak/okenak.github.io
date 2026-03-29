@@ -1,0 +1,99 @@
+---
+const career = [
+  {
+    period: "2022〜",
+    role: "SRE テックリード",
+    project: "ノンデスクワーカー向けSaaS",
+    highlights: [
+      "サービス成長に合わせたインフラ基盤の再設計",
+      "インフラのコード化で、誰でも安全に環境構築できる体制を整備",
+      "監視・アラートの仕組みを整え、障害対応の速度と精度を改善",
+      "インフラコストの最適化・削減",
+      "安全かつ高速にリリースできる開発フローの構築",
+      "セキュリティ強化・監査対応の体制構築",
+    ],
+  },
+  {
+    period: "2018〜2022",
+    role: "バックエンドリード",
+    project: "大規模IPモバイルゲーム 複数タイトル",
+    highlights: [
+      "50万DAU規模の運用・パフォーマンス改善",
+      "Kubernetes/EKS上の開発基盤を構築",
+      "海外版サーバーのリアーキテクト・移植",
+      "運用改善で社内年間MVP受賞",
+    ],
+  },
+  {
+    period: "2014〜2018",
+    role: "フルスタックエンジニア",
+    project: "ゲーム・Webサービス 複数プロダクト",
+    highlights: [
+      "PHP5→7リプレースを単独で完遂",
+      "受託案件で設計〜納品まで一人称で対応",
+      "20タイトル以上のリリース運用に貢献",
+    ],
+  },
+];
+---
+
+<section id="about" class="py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">About</h2>
+    <p class="text-text-muted text-center mb-16">プロフィール</p>
+
+    <div class="bg-bg-card border border-border rounded-xl p-8 md:p-12 mb-12">
+      <h3 class="text-2xl font-bold mb-2">okenak</h3>
+      <p class="text-accent text-sm font-mono mb-4">Fullstack Engineer / SRE — 12年以上の実務経験</p>
+      <a href="https://zenn.dev/okenak" target="_blank" rel="noopener noreferrer" class="inline-block text-sm text-primary hover:text-primary-dark transition-colors mb-6">
+        Zenn（テックブログ） &rarr;
+      </a>
+
+      <div class="space-y-4 text-text-muted leading-relaxed">
+        <p>
+          ゲーム業界で大規模プロダクトの開発・運用を経験した後、SaaS企業でSREテックリードとして
+          インフラ基盤の再構築・運用最適化を推進してきました。
+          アプリケーション開発の現場を長く経験しているからこそ、
+          開発チームの目線に立ったインフラ設計・運用改善ができます。
+        </p>
+        <p>
+          「専任のインフラ担当がいない」「CTOがアプリ側で手一杯」——
+          そんなチームの外部パートナーとして、気軽に頼れる存在でありたいと思っています。
+          難しいことを難しく語るのではなく、チームに合ったやり方を一緒に見つけます。
+        </p>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-border">
+        <p class="text-sm text-text-muted mb-3">得意領域</p>
+        <div class="flex flex-wrap gap-2">
+          {["SRE", "DevOps", "AWS", "Google Cloud", "Terraform", "Kubernetes", "Docker", "CI/CD", "Observability", "Backend", "Fullstack"].map((skill) => (
+            <span class="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-bold text-center mb-8">経歴</h3>
+    <div class="space-y-6">
+      {career.map((item) => (
+        <div class="bg-bg-card border border-border rounded-lg p-6">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+            <h4 class="font-semibold">{item.role}</h4>
+            <span class="text-text-muted text-xs font-mono">{item.period}</span>
+          </div>
+          <p class="text-accent text-sm mb-3">{item.project}</p>
+          <ul class="space-y-1">
+            {item.highlights.map((h) => (
+              <li class="flex items-start gap-2 text-sm text-text-muted">
+                <span class="text-primary mt-0.5">&#10003;</span>
+                {h}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

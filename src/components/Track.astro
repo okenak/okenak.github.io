@@ -1,0 +1,46 @@
+---
+const records = [
+  {
+    label: "セールス支援SaaS企業",
+    stack: ["PHP", "Laravel", "Python", "TypeScript", "Next.js", "AWS", "BigQuery", "Datadog", "GitHub Actions"],
+    description: "サービス立ち上げ期にインフラ担当として参画。サーバー構成・ドメイン設定・デプロイの自動化まで、開発チームがプロダクト開発に集中できる環境を整備。その後もインフラの運用改善、モニタリングツール導入、分析基盤の構築など継続的にサポート",
+  },
+  {
+    label: "AI業務支援SaaS企業",
+    stack: ["TypeScript", "NestJS", "Next.js", "GraphQL", "Google Cloud", "Firebase", "OpenAI", "Vertex AI", "GitHub Actions"],
+    description: "サービス立ち上げ期にインフラ担当として参画。クラウド基盤の構築に加え、AIモデルの実行環境やデータ分析の仕組みなど、プロダクトのコア機能を支えるインフラを整備。運用保守やISMS対応などセキュリティ面もサポート",
+  },
+  {
+    label: "採用支援SaaS企業",
+    stack: ["Ruby", "Ruby on Rails", "Python", "TypeScript", "Next.js", "GraphQL", "AWS", "Firebase", "GitHub Actions"],
+    description: "既存のAWS環境をコードで管理できるようにしたいという相談を受け、既存プロダクトに参画。現状の構成調査・整理から移行計画の策定・実行までを担当",
+  },
+];
+---
+
+<section class="py-24 px-6 bg-bg-card/30">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Track Record</h2>
+    <p class="text-text-muted text-center mb-16">支援実績</p>
+
+    <div class="space-y-6">
+      {records.map((r) => (
+        <div class="p-6 rounded-xl bg-bg-card border border-border">
+          <span class="inline-block text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full mb-3">
+            {r.label}
+          </span>
+          <div class="flex flex-wrap gap-2 mb-3">
+            {r.stack.map((s) => (
+              <span class="px-2 py-0.5 text-xs rounded bg-bg/50 border border-border text-text-muted">{s}</span>
+            ))}
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed">{r.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-text-muted text-xs text-center mt-8">
+      ※ すべてスタートアップへの副業支援としての実績です
+    </p>
+  </div>
+</section>

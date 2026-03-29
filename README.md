@@ -2,6 +2,8 @@
 
 SRE/DevOps技術サポートのブランディングサイト
 
+https://okenak.github.io/
+
 ## Tech Stack
 
 - Astro v6
